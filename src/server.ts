@@ -25,4 +25,4 @@ app.use((request: Request, response: Response, next: NextFunction) => {
     );
     next();
 });
-app.use("users/", UserRouter);
+app.use("/users", UserRouter);

@@ -8,7 +8,7 @@ connectDb()
     .then(() => {
         console.log("Database connected!");
         app.listen(env_app.PORT, () => {
-            console.log("Application running on port " + env_app.PORT);
+            console.log("Server running on port " + env_app.PORT);
         });
     })
     .catch((err) => console.log(err));
