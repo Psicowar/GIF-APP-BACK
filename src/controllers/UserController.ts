@@ -68,7 +68,7 @@ export const UserController = {
         };
         if (userToSend) return res.status(200).send(userToSend);
         return res.status(500).send("Something went wrong");
-
+        
 
 
     },
