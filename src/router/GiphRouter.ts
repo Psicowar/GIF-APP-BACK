@@ -11,3 +11,4 @@ GiphRouter
     .get("/userGifs", tokenChecker, GiphController.getUserGifs)
     .delete("/deleteAllUserGifs", tokenChecker, GiphController.deleteAllUserGifs)
     .delete("/deleteOneUserGif/:id", tokenChecker, GiphController.deleteOneUserGif)
+    .patch("/updateTitleUserGif", GiphController.updateTitleUserGif )

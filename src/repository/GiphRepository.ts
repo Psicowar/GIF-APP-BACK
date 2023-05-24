@@ -30,7 +30,13 @@ export const GiphRepository = {
 
     deleteOneGif: async (id: string) => {
         const areDeleted = await GiphModel.findByIdAndDelete({ _id: id })
-        if(areDeleted) return
+        if (areDeleted) return
+
+    },
+
+    updateTitleGif: async (id: string, title: string) => {
+        const titleGifUpdated = await GiphModel.findByIdAndUpdate({ _id: id }, { $set: { title: title } })        
+        if (titleGifUpdated) return titleGifUpdated
 
     }
 }

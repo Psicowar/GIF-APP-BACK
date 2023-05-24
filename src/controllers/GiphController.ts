@@ -62,8 +62,22 @@ export const GiphController = {
       await GiphRepository.deleteOneGif(id)
       return res.status(200).send()
     } catch (error) {
-      return res.status(500)
+      return res.status(500).send()
     }
+
+  },
+
+  async updateTitleUserGif(req: Request, res: Response) {
+    const { gifTitle, id } = req.body
+
+    try {
+      const updatedUserTitleGif = await GiphRepository.updateTitleGif(id, gifTitle)
+      if (updatedUserTitleGif) return res.status(200).send()
+    } catch (error) {
+      console.error(error);
+      res.status(500).send()
+    }
+
 
   }
 
