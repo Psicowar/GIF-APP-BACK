@@ -8,3 +8,4 @@ UserRouter
     .post("/register", UserController.register)
     .post("/authenticate", UserController.authenticate)
     .post("/userData", tokenChecker, UserController.getUserData)
+    

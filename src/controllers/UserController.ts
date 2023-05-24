@@ -6,7 +6,7 @@ import { UserRepository } from "../repository/UserRepository";
 const bcrypt = require("bcrypt");
 
 
-export const UserController = {
+export const    UserController = {
 
     async register(req: Request, res: Response) {
         const params: FormRegister = req.body;
@@ -68,8 +68,5 @@ export const UserController = {
         };
         if (userToSend) return res.status(200).send(userToSend);
         return res.status(500).send("Something went wrong");
-        
-
-
     },
 }

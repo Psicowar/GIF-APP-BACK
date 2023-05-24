@@ -15,5 +15,22 @@ export const GiphRepository = {
     getAll: async () => {
         const giphs = await GiphModel.find({})
         return giphs
+    },
+
+    findUserGifs: async (id: string) => {
+        const gifs = await GiphModel.find({ id: id })
+        if (gifs) return gifs
+        return
+    },
+
+    deleteAll: async (id: string) => {
+        const areDeleted = await GiphModel.deleteMany({ id });
+        return areDeleted.acknowledged;
+    },
+
+    deleteOneGif: async (id: string) => {
+        const areDeleted = await GiphModel.findByIdAndDelete({ _id: id })
+        if(areDeleted) return
+
     }
 }
