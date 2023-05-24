@@ -4,11 +4,16 @@ import { GiphModel } from "./schemas/GiphSchema";
 export const GiphRepository = {
     save: async (giph: IGiph) => {
         try {
-            GiphModel.create(giph);
-            return 0;
+            const giphSaved = await GiphModel.create(giph);
+            return giphSaved
         } catch (error) {
             console.error(error);
             return undefined;
         }
     },
+
+    getAll: async () => {
+        const giphs = await GiphModel.find({})
+        return giphs
+    }
 }

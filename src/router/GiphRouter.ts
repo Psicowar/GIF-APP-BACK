@@ -4,4 +4,6 @@ import { GiphController } from "../controllers/GiphController";
 export const GiphRouter = Router();
 
 GiphRouter
-    .post("/reload", GiphController.reload)
+    .get("/", GiphController.getAll)
+    .post("/reload", GiphController.seedDB)
+    .post("/upload", GiphController.saveUploadedGiph)
