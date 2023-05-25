@@ -21,7 +21,7 @@
 
 ### Clone the repository:
 
-https://github.com/Psicowar/GIPH-APP-FRONT
+https://github.com/Psicowar/GIF-APP-BACK
 
 ## Environment Variables
 
