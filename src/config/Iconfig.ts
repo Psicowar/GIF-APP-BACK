@@ -1,6 +1,5 @@
 export type env = "development";
 
-
 export interface env_parameters {
     app: {
         PORT: number,
@@ -9,9 +8,7 @@ export interface env_parameters {
     db: {
         DB_URI: string
     }
-
 }
-
 
 export interface Iconfig {
     development: env_parameters,

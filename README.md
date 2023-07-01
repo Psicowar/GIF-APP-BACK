@@ -66,6 +66,16 @@ Jsonwebtoken
 
 Mongoose
 
+Express-fileupload
+
+Fs-extra
+
+Cloudinary
+
+MongoDB
+
+
+
 ---
 
 ### Used IDE
